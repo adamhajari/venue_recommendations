@@ -1,4 +1,3 @@
-from nbsutils import sql
 import sqlite3 as sql3
 import requests
 import json
