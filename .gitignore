@@ -1,0 +1,4 @@
+configs.py
+*.pyc
+sqlite3_analyzer
+.DS_Store
