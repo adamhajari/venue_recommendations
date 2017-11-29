@@ -131,8 +131,9 @@ class VenueRecApp(server.App):
         title = "Recommended Venues for %s" % artist_name
         p = figure(
             title=title, toolbar_location="right", plot_width=600, plot_height=400,
-            tools='hover, box_zoom, reset', title_text_font_size='12pt'
+            tools='hover,box_zoom,reset'
         )
+        p.title.text_font_size = '12pt'
         p.patches(state_xs, state_ys, fill_alpha=0.0, line_width=2)
         p.axis.visible = None
         p.xgrid.grid_line_color = None
