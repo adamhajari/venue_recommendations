@@ -30,7 +30,7 @@ class VenueRecApp(server.App):
     title = "Venue Recommendations"
 
     inputs = [{
-        "input_type": 'text',
+        "type": 'text',
         "label": 'songkick artist id',
         "value": 981579,
         "variable_name": 'artist_id',
@@ -39,7 +39,7 @@ class VenueRecApp(server.App):
         "linked_variable_type": "dropdown",
         "linked_value": " "
     }, {
-        "input_type": 'dropdown',
+        "type": 'dropdown',
         "label": 'songkick name',
         "options": init_artists_options,
         "value": 981579,
@@ -48,42 +48,42 @@ class VenueRecApp(server.App):
         "linked_variable_name": "artist_id",
         "linked_variable_type": "text",
     }, {
-        "input_type": "slider",
+        "type": "slider",
         "label": "number of artists to compare against",
         "value": 20,
         "max": 50,
         "variable_name": "num_artists"
     }, {
-        "input_type": "slider",
+        "type": "slider",
         "label": "number of venues to return",
         "value": 20,
         "max": 50,
         "variable_name": "num_venues"
     }, {
-        "input_type": "checkboxgroup",
+        "type": "checkboxgroup",
         "label": "exclude venues that this artist has played at recently",
         "options": [{"value": "x", "checked": True}],
         "variable_name": "exclude_recent"
     }]
 
     controls = [{
-        "control_type": "button",
+        "type": "button",
         "label": "Get Best Venues",
-        "control_id": "search"
+        "id": "search"
     }]
 
     outputs = [{
-        "output_type": "html",
-        "output_id": "html_map",
+        "type": "html",
+        "id": "html_map",
         "control_id": "search",
     }, {
-        "output_type": "table",
-        "output_id": "best_venues",
+        "type": "table",
+        "id": "best_venues",
         "control_id": "search",
         "sortable": True
     }, {
-        "output_type": "html",
-        "output_id": "attribution"
+        "type": "html",
+        "id": "attribution"
     }]
 
     def __init__(self):
